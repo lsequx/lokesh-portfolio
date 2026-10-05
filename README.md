@@ -175,7 +175,7 @@ The site is deployed on **Vercel**, and every push to `main` redeploys automatic
 
 - ✉️ **Email:** [lokeshsequeira@gmail.com](mailto:lokeshsequeira@gmail.com)
 - 🌐 **Portfolio:** [lokesh-portfolio-wheat.vercel.app](https://lokesh-portfolio-wheat.vercel.app)
-- 🐙 **GitHub:** [github.com/YOUR-USERNAME](https://github.com/lsequx)
+- 🐙 **GitHub:** [github.com/lsequx](https://github.com/lsequx)
 
 ---
 
