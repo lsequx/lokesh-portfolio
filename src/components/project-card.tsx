@@ -169,14 +169,14 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
 
         {project.featured && (
-          <div className="h-52 rounded-2xl border border-border bg-bg/60 p-4 md:col-span-2">
+          <div className="relative hidden aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-bg/60 md:col-span-2 md:block">
             {project.image ? (
               <Image
                 src={project.image}
                 alt={project.imageAlt ?? project.title}
                 fill
                 sizes="(min-width: 768px) 400px, 0px"
-                className="object-cover object-top transition duration-700 group-hover:scale-105"
+                className="object-cover object-left-top transition duration-700 group-hover:scale-105"
               />
             ) : (
               <div className="h-full w-full p-4">
