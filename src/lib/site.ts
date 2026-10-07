@@ -70,6 +70,8 @@ export type Project = {
   stack: string[];
   github?: string;
   demo?: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export const projects: Project[] = [
@@ -77,7 +79,7 @@ export const projects: Project[] = [
     id: "nexus",
     title: "NEXUS",
     tagline: "Network Intelligence & Incident Response Platform",
-    status: "In Progress · ~75%",
+    status: "Completed",
     featured: true,
     description:
       "An end-to-end platform that collects network events, correlates related device impacts, classifies incident severity, and supports root-cause investigation. It's built on the workflows I used daily as a NOC analyst.",
@@ -94,7 +96,9 @@ export const projects: Project[] = [
       "PostgreSQL",
       "Docker",
     ],
-    // github: "https://github.com/lsequx/nexus-network-intelligence",
+    github: "https://github.com/lsequx/nexus-network-intelligence",
+    image: "/images/nexus-dashboard.png",
+    imageAlt: "NEXUS incident dashboard showing correlated network events",
   },
   {
     id: "guard-reporting",

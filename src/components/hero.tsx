@@ -60,7 +60,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-2 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-2" />
           </span>
-          Currently building NEXUS, a network incident intelligence platform
+          Built NEXUS, a network incident intelligence platform
         </motion.a>
 
         <motion.h1

@@ -29,7 +29,7 @@ export function About() {
               <span className="text-fg">
                 Python, FastAPI, React, Next.js and TypeScript
               </span>
-              , backed by PostgreSQL and MongoDB. My current project,{" "}
+              , backed by PostgreSQL and MongoDB. My most recent project,{" "}
               <span className="text-fg">NEXUS</span>, is a network incident
               intelligence platform that correlates events, maps affected
               devices and supports root-cause investigation.

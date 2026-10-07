@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { ArrowUpRight, Code } from "lucide-react";
 import type { Project } from "@/lib/site";
+import Image from "next/image";
 
 function NetworkArt() {
   // Small decorative node graph for the featured card
@@ -168,8 +169,20 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
 
         {project.featured && (
-          <div className="hidden h-52 rounded-2xl border border-border bg-bg/60 p-4 md:col-span-2 md:block">
-            <NetworkArt />
+          <div className="h-52 rounded-2xl border border-border bg-bg/60 p-4 md:col-span-2">
+            {project.image ? (
+              <Image
+                src={project.image}
+                alt={project.imageAlt ?? project.title}
+                fill
+                sizes="(min-width: 768px) 400px, 0px"
+                className="object-cover object-top transition duration-700 group-hover:scale-105"
+              />
+            ) : (
+              <div className="h-full w-full p-4">
+                <NetworkArt />
+              </div>
+            )}
           </div>
         )}
       </div>
