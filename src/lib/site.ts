@@ -104,7 +104,7 @@ export const projects: Project[] = [
     id: "guard-reporting",
     title: "Security Guard Reporting App",
     tagline: "Walkthrough reporting for a facility manager",
-    status: "Working Demo",
+    status: "Prototyped/Working demo",
     description:
       "Designed and built independently in about a month, then iterated with the facility manager through demos and feedback.",
     highlights: [
