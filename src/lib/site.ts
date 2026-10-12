@@ -44,7 +44,20 @@ export const skills = [
       "Linux",
       "AWS EC2 (basics)",
       "ServiceNow",
+      "Salesforce",
     ],
+  },
+  {
+    title: "AI & Development Tools",
+    items: ["Codex", "ChatGPT", "Claude", "Claude Code"],
+  },
+  {
+    title: "Network Monitoring",
+    items: ["SolarWinds", "Nagios"],
+  },
+  {
+    title: "Telecom & ISP Services",
+    items: ["Lumen", "CenturyLink"],
   },
   {
     title: "Engineering",

@@ -18,18 +18,20 @@ export function About() {
         <div className="space-y-5 text-lg leading-relaxed text-muted md:col-span-3">
           <Reveal>
             <p>
-              I&apos;m a software developer who started on the operations side.
-              Years in a NOC taught me how real systems fail, and how much it
-              matters to communicate clearly while they do.
+              I&apos;m a software developer with over four years of experience
+              in IT support and network operations. My background in incident
+              response, troubleshooting and service restoration informs how I
+              build reliable applications and communicate technical issues
+              clearly.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
             <p>
-              Today I build full-stack applications with{" "}
+              I develop full-stack applications with{" "}
               <span className="text-fg">
                 Python, FastAPI, React, Next.js and TypeScript
               </span>
-              , backed by PostgreSQL and MongoDB. My most recent project,{" "}
+              , backed by PostgreSQL and MongoDB. My recent project,{" "}
               <span className="text-fg">NEXUS</span>, is a network incident
               intelligence platform that correlates events, maps affected
               devices and supports root-cause investigation.
@@ -37,11 +39,12 @@ export function About() {
           </Reveal>
           <Reveal delay={0.2}>
             <p>
-              I like short feedback loops: build a working demo, put it in front
-              of the people who will use it, and iterate. I&apos;m studying
-              Computer Science &amp; Engineering at Miami University and looking
-              for a software development role where I can keep doing exactly
-              that.
+              My approach combines practical problem-solving with user feedback:
+              translating operational needs into working software, validating
+              the results and refining the experience. I&apos;m pursuing a
+              degree in Computer Science &amp; Engineering at Miami University
+              and seeking a software development role where I can contribute
+              my technical skills and operational experience.
             </p>
           </Reveal>
         </div>
