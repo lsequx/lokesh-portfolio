@@ -19,7 +19,7 @@ type Status = "idle" | "sending" | "success" | "error";
 const field =
   "w-full rounded-xl border border-border bg-bg px-4 py-3 text-fg outline-none transition placeholder:text-muted/60 focus:border-accent focus:ring-2 focus:ring-accent/30";
 
-export function Contact() {
+export function Contact({ emailConfigured = false }: { emailConfigured?: boolean }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
@@ -101,6 +101,14 @@ export function Contact() {
 
         <Reveal delay={0.1} className="md:col-span-3">
           <div className="relative rounded-3xl border border-border bg-surface p-6 md:p-8">
+            {!emailConfigured ? (
+              <div className="flex min-h-[22rem] flex-col items-start justify-center">
+                <Mail size={36} className="text-accent-2" />
+                <h3 className="mt-4 font-display text-2xl font-bold">Get in touch directly</h3>
+                <p className="mt-3 leading-relaxed text-muted">For software development opportunities, internships or questions about my projects, reach me by email or LinkedIn.</p>
+                <a href={`mailto:${site.email}`} className="mt-6 rounded-full bg-accent px-6 py-3 font-medium text-white">Email Lokesh</a>
+              </div>
+            ) : (
             <AnimatePresence mode="wait">
               {status === "success" ? (
                 <motion.div
@@ -227,6 +235,7 @@ export function Contact() {
                 </motion.form>
               )}
             </AnimatePresence>
+            )}
           </div>
         </Reveal>
       </div>

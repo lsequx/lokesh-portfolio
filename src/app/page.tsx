@@ -17,7 +17,7 @@ export default function Home() {
         <Projects />
         <Skills />
         <Experience />
-        <Contact />
+        <Contact emailConfigured={Boolean(process.env.RESEND_API_KEY && process.env.CONTACT_TO_EMAIL)} />
       </main>
       <Footer />
     </>

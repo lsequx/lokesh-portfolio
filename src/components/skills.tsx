@@ -19,6 +19,12 @@ export function Skills() {
     <section id="skills" className="mx-auto max-w-6xl px-6 py-28">
       <SectionHeading label="skills" title="Tech I work with" />
 
+      <p className="mb-8 max-w-3xl leading-relaxed text-muted">
+        My core development stack is Python, FastAPI, React, Next.js, TypeScript
+        and PostgreSQL. NEXUS demonstrates how I combine these technologies
+        with my network operations experience.
+      </p>
+
       <div className="grid gap-6 md:grid-cols-2">
         {skills.map((group, i) => (
           <Reveal key={group.title} delay={0.08 * i}>

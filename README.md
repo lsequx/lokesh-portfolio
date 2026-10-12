@@ -152,6 +152,14 @@ NEXT_PUBLIC_SITE_URL=https://lokesh-portfolio-wheat.vercel.app
 
 ---
 
+## Portfolio case study and validation
+
+The NEXUS case study is available at `/projects/nexus`. Its technical details and screenshots come from the public NEXUS repository; it does not claim production usage or measured business outcomes.
+
+Run `npm run lint` and `npm run build` before publishing. GitHub Actions runs both checks on pushes to `main` and pull requests.
+
+The contact section offers direct email when `RESEND_API_KEY` or `CONTACT_TO_EMAIL` is absent at build time. Configure both variables and rebuild/redeploy to enable the form. Direct email and LinkedIn remain available in either mode. The default metadata URL is the production Vercel URL; set `NEXT_PUBLIC_SITE_URL` for another deployment.
+
 ## ☁️ Deployment
 
 The site is deployed on **Vercel**, and every push to `main` redeploys automatically.

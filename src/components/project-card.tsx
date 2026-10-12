@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ArrowUpRight, Code } from "lucide-react";
 import type { Project } from "@/lib/site";
 import Image from "next/image";
+import Link from "next/link";
 
 function NetworkArt() {
   // Small decorative node graph for the featured card
@@ -129,6 +130,12 @@ export function ProjectCard({ project }: { project: Project }) {
             ))}
           </ul>
 
+          {project.outcome && (
+            <p className="mt-5 border-l-2 border-accent-2 pl-4 text-sm leading-relaxed text-fg">
+              <span className="font-semibold">Outcome: </span>{project.outcome}
+            </p>
+          )}
+
           <ul className="mt-6 flex flex-wrap gap-2">
             {project.stack.map((t) => (
               <li
@@ -150,10 +157,11 @@ export function ProjectCard({ project }: { project: Project }) {
               >
                 <Code size={16} /> Source <ArrowUpRight size={14} />
               </a>
-            ) : (
-              <span className="inline-flex items-center gap-1.5 text-muted">
-                <Code size={16} />
-              </span>
+            ) : null}
+            {project.caseStudy && (
+              <Link href={project.caseStudy} className="inline-flex items-center gap-1.5 text-accent hover:underline">
+                Read case study <ArrowUpRight size={14} />
+              </Link>
             )}
             {project.demo && (
               <a
@@ -169,13 +177,13 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
 
         {project.featured && (
-          <div className="relative hidden aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-bg/60 md:col-span-2 md:block">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-bg/60 md:col-span-2">
             {project.image ? (
               <Image
                 src={project.image}
                 alt={project.imageAlt ?? project.title}
                 fill
-                sizes="(min-width: 768px) 400px, 0px"
+                sizes="(min-width: 768px) 400px, 100vw"
                 className="object-cover object-left-top transition duration-700 group-hover:scale-105"
               />
             ) : (

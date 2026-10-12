@@ -1,9 +1,9 @@
 export const site = {
   name: "Lokesh Sequeira",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lokesh-portfolio-wheat.vercel.app",
   email: "lokeshsequeira@gmail.com",
   github: "https://github.com/lsequx",
-  linkedin: "www.linkedin.com/in/lokesh-sequeira-3a5243261",
+  linkedin: "https://www.linkedin.com/in/lokesh-sequeira-3a5243261",
   nav: [
     { id: "about", label: "About" },
     { id: "projects", label: "Projects" },
@@ -34,30 +34,26 @@ export const skills = [
     ],
   },
   {
-    title: "Data & Tools",
+    title: "Databases & Infrastructure",
     items: [
       "PostgreSQL",
       "MongoDB",
       "Docker",
-      "Git/GitHub",
-      "Postman",
       "Linux",
       "AWS EC2 (basics)",
-      "ServiceNow",
-      "Salesforce",
     ],
   },
   {
-    title: "AI & Development Tools",
-    items: ["Codex", "ChatGPT", "Claude", "Claude Code"],
+    title: "Development Tools",
+    items: ["Git/GitHub", "Postman", "Codex", "ChatGPT", "Claude", "Claude Code"],
   },
   {
     title: "Network Monitoring",
     items: ["SolarWinds", "Nagios"],
   },
   {
-    title: "Telecom & ISP Services",
-    items: ["Lumen", "CenturyLink"],
+    title: "Service & Customer Platforms",
+    items: ["Salesforce", "ServiceNow"],
   },
   {
     title: "Engineering",
@@ -83,6 +79,8 @@ export type Project = {
   stack: string[];
   github?: string;
   demo?: string;
+  caseStudy?: string;
+  outcome?: string;
   image?: string;
   imageAlt?: string;
 };
@@ -92,7 +90,8 @@ export const projects: Project[] = [
     id: "nexus",
     title: "NEXUS",
     tagline: "Network Intelligence & Incident Response Platform",
-    status: "Completed",
+    status: "Independent project",
+    caseStudy: "/projects/nexus",
     featured: true,
     description:
       "An end-to-end platform that collects network events, correlates related device impacts, classifies incident severity, and supports root-cause investigation. It's built on the workflows I used daily as a NOC analyst.",
@@ -117,7 +116,8 @@ export const projects: Project[] = [
     id: "guard-reporting",
     title: "Security Guard Reporting App",
     tagline: "Walkthrough reporting for a facility manager",
-    status: "Prototyped/Working demo",
+    status: "Working prototype",
+    outcome: "Built independently in about a month and refined through demos with the facility manager.",
     description:
       "Designed and built independently in about a month, then iterated with the facility manager through demos and feedback.",
     highlights: [
@@ -140,6 +140,7 @@ export const projects: Project[] = [
     title: "Customer Portal Redesign",
     tagline: "Self-directed initiative at H5 DataCenters",
     status: "Prototype",
+    outcome: "Created a working concept for clearer customer navigation, ticket visibility and status updates.",
     description:
       "Prototyped a modernized customer portal alongside my NOC responsibilities, learning a new stack along the way.",
     highlights: [
@@ -195,7 +196,7 @@ export const experience: Job[] = [
       title: "Incident story: city-level power outage",
       body: "As the primary contact during a power outage affecting multiple customer servers, I created a master incident ticket plus customer-specific tickets, communicated status, gathered diagnostics and coordinated recovery calls over several hours.",
     },
-    tags: ["Nagios", "Incident Response", "Escalation", "Root-Cause Analysis"],
+    tags: ["Nagios", "Lumen / CenturyLink", "Incident Response", "Root-Cause Analysis"],
   },
   {
     id: "atos",
@@ -217,10 +218,5 @@ export const education = [
     school: "Miami University",
     credential: "B.S. Computer Science & Engineering",
     period: "Expected 2028",
-  },
-  {
-    school: "Talawanda High School",
-    credential: "High School Diploma",
-    period: "May 2019",
   },
 ];

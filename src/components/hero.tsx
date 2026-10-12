@@ -1,17 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
 import { NetworkBackground } from "@/components/network-background";
 import { site } from "@/lib/site";
-
-const roles = [
-  "Full-Stack Developer",
-  "API & Backend Builder",
-  "Incident Troubleshooter",
-  "Python · FastAPI · React",
-];
 
 const container = {
   hidden: {},
@@ -27,13 +19,6 @@ const item = {
 };
 
 export function Hero() {
-  const [i, setI] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setI((v) => (v + 1) % roles.length), 2600);
-    return () => clearInterval(t);
-  }, []);
-
   return (
     <section
       id="home"
@@ -73,30 +58,19 @@ export function Hero() {
 
         <motion.div
           variants={item}
-          className="mt-4 h-10 font-display text-2xl text-muted sm:text-3xl"
+          className="mt-4 font-display text-2xl text-muted sm:text-3xl"
         >
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={roles[i]}
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -14 }}
-              transition={{ duration: 0.35 }}
-              className="inline-block bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent"
-            >
-              {roles[i]}
-            </motion.span>
-          </AnimatePresence>
+          <span className="text-accent">Full-Stack Developer</span>
         </motion.div>
 
         <motion.p
           variants={item}
           className="mt-6 max-w-2xl text-lg leading-relaxed text-muted"
         >
-          I build full-stack applications with Python, FastAPI, React and
-          Next.js, and I bring a NOC engineer&apos;s habits to every project:
-          root-cause thinking, clear communication, and ownership from concept
-          to working demo.
+          I build incident-management tools and reliable web applications with
+          Python, FastAPI, React, Next.js and TypeScript. My background in network
+          operations brings practical troubleshooting, clear communication and
+          experience supporting real users to my development work.
         </motion.p>
 
         <motion.div

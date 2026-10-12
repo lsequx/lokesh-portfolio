@@ -13,7 +13,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 const description =
-  "Full-stack developer with a NOC engineer's troubleshooting discipline. Python, FastAPI, React, Next.js and TypeScript.";
+  "Full-stack developer with a network operations experience. Python, FastAPI, React, Next.js and TypeScript.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
