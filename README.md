@@ -21,7 +21,7 @@
 
 This is my personal portfolio, built to showcase my projects, skills, work experience and resume in one place. It tells the story of how I moved from NOC and network operations into full-stack software development, and it doubles as a working example of how I build: clean components, thoughtful animation, accessibility, and production details like validation and rate limiting.
 
-🔗 **Live:** portfolio.builtbylokesh.dev
+🌐 **Live Website:** [View Portfolio](https://portfolio.builtbylokesh.dev)
 
 ---
 
