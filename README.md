@@ -181,8 +181,8 @@ The site is deployed on **Vercel**, and every push to `main` redeploys automatic
 
 ## 📬 Contact
 
-- ✉️ **Email:** [lokeshsequeira@gmail.com](mailto:lokeshsequeira@gmail.com)
-- 🌐 **Portfolio:** [lokesh-portfolio-wheat.vercel.app](https://lokesh-portfolio-wheat.vercel.app)
+- ✉️ **Email:** [hello@builtbylokesh.dev](mailto:hello@builtbylokesh.dev)
+- 🌐 **Portfolio:** [View Portfolio](https://portfolio.builtbylokesh.dev)
 - 🐙 **GitHub:** [github.com/lsequx](https://github.com/lsequx)
 
 ---
