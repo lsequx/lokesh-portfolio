@@ -116,7 +116,7 @@ export const projects: Project[] = [
     id: "guard-reporting",
     title: "Security Guard Reporting App",
     tagline: "Walkthrough reporting for a facility manager",
-    status: "Working prototype",
+    status: "Prototyped",
     outcome: "Built independently in about a month and refined through demos with the facility manager.",
     description:
       "Designed and built independently in about a month, then iterated with the facility manager through demos and feedback.",
@@ -139,7 +139,7 @@ export const projects: Project[] = [
     id: "portal-redesign",
     title: "Customer Portal Redesign",
     tagline: "Self-directed initiative at H5 DataCenters",
-    status: "Prototype",
+    status: "Prototyped",
     outcome: "Created a working concept for clearer customer navigation, ticket visibility and status updates.",
     description:
       "Prototyped a modernized customer portal alongside my NOC responsibilities, learning a new stack along the way.",
