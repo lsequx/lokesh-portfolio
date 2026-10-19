@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
 import { NetworkBackground } from "@/components/network-background";
-import { site } from "@/lib/site";
+import { profile, site } from "@/lib/site";
 
 const container = {
   hidden: {},
@@ -25,6 +25,7 @@ export function Hero() {
       className="relative flex min-h-screen items-center overflow-hidden"
     >
       <NetworkBackground />
+      <div className="hero-pattern pointer-events-none absolute inset-0" />
 
       {/* Soft blue glow + fade into the next section */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,color-mix(in_srgb,var(--accent)_22%,transparent),transparent)]" />
@@ -34,7 +35,7 @@ export function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative mx-auto w-full max-w-6xl px-6 pt-24"
+        className="hero-content relative mx-auto w-full max-w-6xl px-6 pt-24"
       >
         <motion.a
           variants={item}
@@ -45,14 +46,14 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-2 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-2" />
           </span>
-          Built NEXUS, a network incident intelligence platform
+          {profile.heroBadge}
         </motion.a>
 
         <motion.h1
           variants={item}
           className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl md:text-8xl"
         >
-          Hi, I&apos;m Lokesh
+          Hi, I&apos;m {profile.firstName}
           <span className="text-accent">.</span>
         </motion.h1>
 
@@ -60,26 +61,23 @@ export function Hero() {
           variants={item}
           className="mt-4 font-display text-2xl text-muted sm:text-3xl"
         >
-          <span className="text-accent">Full-Stack Developer</span>
+          <span className="text-accent">{profile.role}</span>
         </motion.div>
 
         <motion.p
           variants={item}
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-muted"
+          className="hero-intro mt-6 max-w-2xl text-lg leading-relaxed text-muted"
         >
-          I build incident-management tools and reliable web applications with
-          Python, FastAPI, React, Next.js and TypeScript. My background in network
-          operations brings practical troubleshooting, clear communication and
-          experience supporting real users to my development work.
+          {profile.intro}
         </motion.p>
 
         <motion.div
           variants={item}
-          className="mt-10 flex flex-wrap items-center gap-4"
+          className="hero-actions mt-10 flex flex-wrap items-center gap-4"
         >
           <a
             href="#projects"
-            className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-white shadow-[0_0_30px_-8px_var(--accent)] transition hover:-translate-y-0.5 hover:shadow-[0_0_40px_-4px_var(--accent)]"
+            className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-on-accent shadow-[0_0_30px_-8px_var(--accent)] transition hover:-translate-y-0.5 hover:shadow-[0_0_40px_-4px_var(--accent)]"
           >
             View my work
             <ArrowDown
@@ -99,7 +97,7 @@ export function Hero() {
 
         <motion.div
           variants={item}
-          className="mt-10 flex gap-6 font-mono text-sm text-muted"
+          className="hero-links mt-10 flex flex-wrap gap-6 font-mono text-sm text-muted"
         >
           <a
             href={site.github}

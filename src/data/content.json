@@ -1,0 +1,288 @@
+{
+  "theme": "midnight",
+  "profile": {
+    "name": "Lokesh Sequeira",
+    "firstName": "Lokesh",
+    "initials": "LS",
+    "role": "Full-Stack Developer",
+    "heroBadge": "Built NEXUS, a network incident intelligence platform",
+    "intro": "I build incident-management tools and reliable web applications with Python, FastAPI, React, Next.js and TypeScript. My background in network operations brings practical troubleshooting, clear communication and experience supporting real users to my development work.",
+    "photo": "/images/lokesh.png",
+    "location": "Pennsylvania, USA",
+    "email": "lokeshsequeira@gmail.com",
+    "github": "https://github.com/lsequx",
+    "linkedin": "https://www.linkedin.com/in/lokesh-sequeira-3a5243261",
+    "about": [
+      "I'm a software developer with over four years of experience in IT support and network operations. My background in incident response, troubleshooting and service restoration informs how I build reliable applications and communicate technical issues clearly.",
+      "I develop full-stack applications with **Python, FastAPI, React, Next.js and TypeScript**, backed by PostgreSQL and MongoDB. My recent project, **NEXUS**, is a network incident intelligence platform that correlates events, maps affected devices and supports root-cause investigation.",
+      "My approach combines practical problem-solving with user feedback: translating operational needs into working software, validating the results and refining the experience. I'm pursuing a degree in Computer Science & Engineering at Miami University and seeking a software development role where I can contribute my technical skills and operational experience."
+    ],
+    "stats": [
+      {
+        "value": "4+",
+        "label": "Years in IT & network operations"
+      },
+      {
+        "value": "12 hr",
+        "label": "Solo shifts owning incident response"
+      },
+      {
+        "value": "15–20",
+        "label": "Tickets handled per shift"
+      },
+      {
+        "value": "2",
+        "label": "Analysts trained and onboarded"
+      }
+    ]
+  },
+  "sections": {
+    "about": {
+      "label": "about",
+      "title": "About me"
+    },
+    "projects": {
+      "label": "projects",
+      "title": "Things I've built"
+    },
+    "skills": {
+      "label": "skills",
+      "title": "Tech I work with",
+      "intro": "My core development stack is Python, FastAPI, React, Next.js, TypeScript and PostgreSQL. NEXUS demonstrates how I combine these technologies with my network operations experience."
+    },
+    "experience": {
+      "label": "experience",
+      "title": "Where I've worked"
+    },
+    "education": {
+      "title": "Education"
+    },
+    "contact": {
+      "label": "contact",
+      "title": "Let's talk",
+      "intro": "I'm looking for a software development role and I'm always happy to talk about projects, internships or ideas. Send a message and I'll get back to you.",
+      "ctaTitle": "Get in touch directly",
+      "ctaBody": "For software development opportunities, internships or questions about my projects, reach me by email or LinkedIn."
+    },
+    "footer": {
+      "tagline": "Built with Next.js, TypeScript, Tailwind & Framer Motion"
+    }
+  },
+  "skills": [
+    {
+      "title": "Languages",
+      "items": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "SQL"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "React",
+        "Next.js",
+        "Responsive UI",
+        "Form Validation"
+      ]
+    },
+    {
+      "title": "Backend & APIs",
+      "items": [
+        "FastAPI",
+        "Flask",
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "Session Handling"
+      ]
+    },
+    {
+      "title": "Databases & Infrastructure",
+      "items": [
+        "PostgreSQL",
+        "MongoDB",
+        "Docker",
+        "Linux",
+        "AWS EC2 (basics)"
+      ]
+    },
+    {
+      "title": "Development Tools",
+      "items": [
+        "Git/GitHub",
+        "Postman",
+        "Codex",
+        "ChatGPT",
+        "Claude",
+        "Claude Code"
+      ]
+    },
+    {
+      "title": "Network Monitoring",
+      "items": [
+        "SolarWinds",
+        "Nagios"
+      ]
+    },
+    {
+      "title": "Service & Customer Platforms",
+      "items": [
+        "Salesforce",
+        "ServiceNow"
+      ]
+    },
+    {
+      "title": "Engineering",
+      "items": [
+        "Full-Stack Development",
+        "API Integration",
+        "Debugging",
+        "Data Validation",
+        "Incident Analysis",
+        "Root-Cause Analysis"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "nexus",
+      "title": "NEXUS",
+      "tagline": "Network Intelligence & Incident Response Platform",
+      "status": "Independent project",
+      "caseStudy": "/projects/nexus",
+      "featured": true,
+      "description": "An end-to-end platform that collects network events, correlates related device impacts, classifies incident severity, and supports root-cause investigation. It's built on the workflows I used daily as a NOC analyst.",
+      "highlights": [
+        "Models direct and indirect device relationships to show what happened, when, and which components were affected",
+        "Investigator actions for investigation, resolution and closure, with timestamped state transitions",
+        "Historical records to help spot and review recurring events"
+      ],
+      "stack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "github": "https://github.com/lsequx/nexus-network-intelligence",
+      "image": "/images/nexus-dashboard.png",
+      "imageAlt": "NEXUS incident dashboard showing correlated network events"
+    },
+    {
+      "id": "guard-reporting",
+      "title": "Security Guard Reporting App",
+      "tagline": "Walkthrough reporting for a facility manager",
+      "status": "Prototyped",
+      "outcome": "Built independently in about a month and refined through demos with the facility manager.",
+      "description": "Designed and built independently in about a month, then iterated with the facility manager through demos and feedback.",
+      "highlights": [
+        "Login-session checks and duplicate guard-name prevention",
+        "Required-field and checkbox validation with clear error handling",
+        "Emailed reports with guard identity, notes, and date/time details"
+      ],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "MongoDB",
+        "React",
+        "Next.js",
+        "Flask",
+        "Gmail SMTP"
+      ]
+    },
+    {
+      "id": "portal-redesign",
+      "title": "Customer Portal Redesign",
+      "tagline": "Self-directed initiative at H5 DataCenters",
+      "status": "Prototyped",
+      "outcome": "Created a working concept for clearer customer navigation, ticket visibility and status updates.",
+      "description": "Prototyped a modernized customer portal alongside my NOC responsibilities, learning a new stack along the way.",
+      "highlights": [
+        "Clearer navigation and more readable status updates",
+        "Document links, ticket visibility, and an updated login presentation"
+      ],
+      "stack": [
+        "Ruby on Rails",
+        "CSS",
+        "JavaScript",
+        "jQuery"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "qualfon",
+      "role": "Remote Technical Assistant",
+      "company": "Qualfon Data Services Group / Forged Fiber 37",
+      "location": "Remote",
+      "period": "May 2026 – Present",
+      "current": true,
+      "bullets": [
+        "Handle roughly 10–15 technician-support calls per day, documenting each interaction in Salesforce with about a 99% call-to-case ratio",
+        "Troubleshoot fiber installation, connectivity and Q1000K/W1700 equipment issues, including misrouted splitter and service-leg connections",
+        "Verify configurations, perform VLAN changes, provision or reset ONTs, and support service restoration",
+        "Work with field technicians through hardware replacements and additional diagnostics"
+      ],
+      "tags": [
+        "Salesforce",
+        "Calix",
+        "Adtran",
+        "VLANs",
+        "ONT Provisioning"
+      ]
+    },
+    {
+      "id": "h5",
+      "role": "NOC Analyst",
+      "company": "H5 DataCenters",
+      "location": "Cincinnati, OH",
+      "period": "Jun 2022 – May 2025",
+      "bullets": [
+        "Monitored data-center and customer-server availability with status dashboards, Nagios, ping and traceroute, handling about 15–20 tickets per 12-hour shift",
+        "Owned incident response during solo 12-hour shifts, coordinating with network engineering, data-center teams and ISPs including Lumen/CenturyLink",
+        "Investigated connectivity, firewall, access-point, latency and server-reachability incidents, and maintained ticket histories and shift handoffs",
+        "Trained 2 new analysts on ticket workflows, diagnostics, incident-versus-outage handling and escalation",
+        "Used downtime to follow up on and close 10–20 older high-priority tickets, improving documentation and customer-status visibility"
+      ],
+      "story": {
+        "title": "Incident story: city-level power outage",
+        "body": "As the primary contact during a power outage affecting multiple customer servers, I created a master incident ticket plus customer-specific tickets, communicated status, gathered diagnostics and coordinated recovery calls over several hours."
+      },
+      "tags": [
+        "Nagios",
+        "Lumen / CenturyLink",
+        "Incident Response",
+        "Root-Cause Analysis"
+      ]
+    },
+    {
+      "id": "atos",
+      "role": "L1 Helpdesk Agent",
+      "company": "ATOS",
+      "location": "Mason, OH",
+      "period": "Aug 2021 – May 2022",
+      "bullets": [
+        "Resolved or escalated about 10–20 tickets per shift covering account lockouts, password resets, secure-login fob numbers and access issues",
+        "Provided first-level support by phone, email and service portal, investigating issues and communicating ticket updates",
+        "Supported operational monitoring of physical security and IT systems, escalating issues and informing internal teams"
+      ],
+      "tags": [
+        "Helpdesk",
+        "Ticketing",
+        "User Access"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Miami University",
+      "credential": "B.S. Computer Science & Engineering",
+      "period": "Expected 2028"
+    }
+  ]
+}

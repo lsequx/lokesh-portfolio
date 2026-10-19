@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { site } from "@/lib/site";
+import { profile, sections, site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -49,14 +49,12 @@ export function Contact({ emailConfigured = false }: { emailConfigured?: boolean
 
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-28">
-      <SectionHeading label="contact" title="Let's talk" />
+      <SectionHeading {...sections.contact} />
 
       <div className="grid gap-12 md:grid-cols-5">
         <Reveal className="space-y-6 md:col-span-2">
           <p className="text-lg leading-relaxed text-muted">
-            I&apos;m looking for a software development role and I&apos;m always
-            happy to talk about projects, internships or ideas. Send a message
-            and I&apos;ll get back to you.
+            {sections.contact.intro}
           </p>
 
           <ul className="space-y-4">
@@ -75,7 +73,7 @@ export function Contact({ emailConfigured = false }: { emailConfigured?: boolean
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface">
                 <MapPin size={18} />
               </span>
-              Pennsylvania, USA
+              {profile.location}
             </li>
           </ul>
 
@@ -104,9 +102,9 @@ export function Contact({ emailConfigured = false }: { emailConfigured?: boolean
             {!emailConfigured ? (
               <div className="flex min-h-[22rem] flex-col items-start justify-center">
                 <Mail size={36} className="text-accent-2" />
-                <h3 className="mt-4 font-display text-2xl font-bold">Get in touch directly</h3>
-                <p className="mt-3 leading-relaxed text-muted">For software development opportunities, internships or questions about my projects, reach me by email or LinkedIn.</p>
-                <a href={`mailto:${site.email}`} className="mt-6 rounded-full bg-accent px-6 py-3 font-medium text-white">Email Lokesh</a>
+                <h3 className="mt-4 font-display text-2xl font-bold">{sections.contact.ctaTitle}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{sections.contact.ctaBody}</p>
+                <a href={`mailto:${site.email}`} className="mt-6 rounded-full bg-accent px-6 py-3 font-medium text-on-accent">Email {profile.firstName}</a>
               </div>
             ) : (
             <AnimatePresence mode="wait">
@@ -219,7 +217,7 @@ export function Contact({ emailConfigured = false }: { emailConfigured?: boolean
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-white shadow-[0_0_30px_-8px_var(--accent)] transition hover:-translate-y-0.5 hover:shadow-[0_0_40px_-4px_var(--accent)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+                    className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-on-accent shadow-[0_0_30px_-8px_var(--accent)] transition hover:-translate-y-0.5 hover:shadow-[0_0_40px_-4px_var(--accent)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
                   >
                     {status === "sending" ? (
                       <>

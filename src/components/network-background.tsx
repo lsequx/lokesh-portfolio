@@ -18,6 +18,8 @@ export function NetworkBackground() {
     const ctx = canvas?.getContext("2d");
     const parent = canvas?.parentElement;
     if (!canvas || !ctx || !parent) return;
+    // Themes without the network effect hide the canvas; skip the animation.
+    if (getComputedStyle(canvas).display === "none") return;
 
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -144,7 +146,7 @@ export function NetworkBackground() {
     <canvas
       ref={canvasRef}
       aria-hidden
-      className="pointer-events-none absolute inset-0"
+      className="hero-network pointer-events-none absolute inset-0"
     />
   );
 }

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { skills } from "@/lib/site";
+import { sections, skills } from "@/lib/site";
 
 const list = {
   hidden: {},
@@ -17,12 +17,10 @@ const chip = {
 export function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-6xl px-6 py-28">
-      <SectionHeading label="skills" title="Tech I work with" />
+      <SectionHeading {...sections.skills} />
 
       <p className="mb-8 max-w-3xl leading-relaxed text-muted">
-        My core development stack is Python, FastAPI, React, Next.js, TypeScript
-        and PostgreSQL. NEXUS demonstrates how I combine these technologies
-        with my network operations experience.
+        {sections.skills.intro}
       </p>
 
       <div className="grid gap-6 md:grid-cols-2">

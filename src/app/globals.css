@@ -11,6 +11,9 @@
   --accent: #2563eb;
   --accent-2: #0369a1;
   --border: #e2e8f0;
+  --on-accent: #ffffff;
+  --display-font: var(--font-space);
+  --body-font: var(--font-inter);
 }
 
 .dark {
@@ -32,10 +35,166 @@
   --color-accent: var(--accent);
   --color-accent-2: var(--accent-2);
   --color-border: var(--border);
+  --color-on-accent: var(--on-accent);
 
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-space);
+  --font-sans: var(--body-font);
+  --font-display: var(--display-font);
   --font-mono: var(--font-jetbrains);
+}
+
+/*
+ * Design themes. The dashboard sets data-theme on <html> (see src/lib/themes.ts).
+ * "midnight" is the default palette above. Each theme overrides colors for
+ * light and dark mode, fonts, corner radius and hero styling only, so every
+ * theme shares the same responsive layout.
+ */
+.hero-pattern {
+  display: none;
+}
+
+/* Terminal: green-on-black, monospace, square corners */
+[data-theme="terminal"] {
+  --bg: #f3f6f1;
+  --surface: #ffffff;
+  --fg: #0c1a0c;
+  --muted: #4b5f4b;
+  --accent: #15803d;
+  --accent-2: #0e7490;
+  --border: #d4e0d4;
+  --on-accent: #ffffff;
+  --display-font: var(--font-jetbrains);
+  --body-font: var(--font-jetbrains);
+  --radius-sm: 0;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 3px;
+  --radius-2xl: 4px;
+  --radius-3xl: 6px;
+}
+[data-theme="terminal"].dark {
+  --bg: #030603;
+  --surface: #0a120a;
+  --fg: #d1fadf;
+  --muted: #7fa88a;
+  --accent: #22c55e;
+  --accent-2: #a3e635;
+  --border: #173017;
+  --on-accent: #031203;
+}
+
+/* Editorial: warm paper, serif headings, centered hero */
+[data-theme="editorial"] {
+  --bg: #faf7f2;
+  --surface: #fffdf9;
+  --fg: #1c1917;
+  --muted: #6b625a;
+  --accent: #c2410c;
+  --accent-2: #9a3412;
+  --border: #e7dfd4;
+  --on-accent: #ffffff;
+  --display-font: var(--font-fraunces);
+  --radius-xl: 6px;
+  --radius-2xl: 8px;
+  --radius-3xl: 10px;
+}
+[data-theme="editorial"].dark {
+  --bg: #141110;
+  --surface: #1c1816;
+  --fg: #f5efe6;
+  --muted: #a8998a;
+  --accent: #fb923c;
+  --accent-2: #fdba74;
+  --border: #2e2723;
+  --on-accent: #1c1009;
+}
+[data-theme="editorial"] .hero-network {
+  display: none;
+}
+[data-theme="editorial"] .hero-pattern {
+  display: block;
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000, transparent);
+}
+
+/* Sunset: rose and amber gradients, soft rounded cards, centered hero */
+[data-theme="sunset"] {
+  --bg: #fff7f5;
+  --surface: #ffffff;
+  --fg: #1f1022;
+  --muted: #7a5c6e;
+  --accent: #e11d48;
+  --accent-2: #d97706;
+  --border: #f5dde3;
+  --on-accent: #ffffff;
+  --display-font: var(--font-sora);
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+[data-theme="sunset"].dark {
+  --bg: #0d0812;
+  --surface: #170f1f;
+  --fg: #fbeef5;
+  --muted: #b39bb0;
+  --accent: #fb7185;
+  --accent-2: #fbbf24;
+  --border: #2d1d38;
+  --on-accent: #1a0610;
+}
+[data-theme="sunset"] .hero-pattern {
+  display: block;
+  background:
+    radial-gradient(circle at 15% 25%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 40%),
+    radial-gradient(circle at 85% 65%, color-mix(in srgb, var(--accent-2) 20%, transparent), transparent 45%);
+}
+
+/* Minimal: monochrome, one typeface, faint grid */
+[data-theme="minimal"] {
+  --bg: #ffffff;
+  --surface: #fafafa;
+  --fg: #09090b;
+  --muted: #71717a;
+  --accent: #18181b;
+  --accent-2: #52525b;
+  --border: #e4e4e7;
+  --on-accent: #ffffff;
+  --display-font: var(--font-inter);
+  --radius-2xl: 0.75rem;
+  --radius-3xl: 1rem;
+}
+[data-theme="minimal"].dark {
+  --bg: #09090b;
+  --surface: #111113;
+  --fg: #fafafa;
+  --muted: #a1a1aa;
+  --accent: #fafafa;
+  --accent-2: #a1a1aa;
+  --border: #27272a;
+  --on-accent: #09090b;
+}
+[data-theme="minimal"] .hero-network {
+  display: none;
+}
+[data-theme="minimal"] .hero-pattern {
+  display: block;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, #000 30%, transparent);
+  opacity: 0.6;
+}
+
+/* Centered hero for editorial and sunset */
+:is([data-theme="editorial"], [data-theme="sunset"]) .hero-content {
+  text-align: center;
+}
+:is([data-theme="editorial"], [data-theme="sunset"]) .hero-intro {
+  margin-inline: auto;
+}
+:is([data-theme="editorial"], [data-theme="sunset"]) :is(.hero-actions, .hero-links) {
+  justify-content: center;
 }
 
 html {
@@ -45,7 +204,7 @@ html {
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--body-font), system-ui, sans-serif;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;

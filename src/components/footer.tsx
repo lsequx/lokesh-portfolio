@@ -1,4 +1,4 @@
-import { site } from "@/lib/site";
+import { sections, site } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
           © {new Date().getFullYear()} {site.name}
         </p>
         <p className="font-mono">
-          Built with Next.js, TypeScript, Tailwind &amp; Framer Motion
+          {sections.footer.tagline}
         </p>
       </div>
     </footer>

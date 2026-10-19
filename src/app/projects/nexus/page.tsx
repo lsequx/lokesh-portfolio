@@ -23,7 +23,7 @@ export default function NexusCaseStudy() {
       <h1 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-6xl">NEXUS</h1>
       <p className="mt-4 max-w-3xl text-xl leading-relaxed text-muted">Turning a stream of network alerts into an incident an operator can investigate.</p>
       <div className="mt-6 flex flex-wrap gap-4 text-sm">
-        <a href="https://github.com/lsequx/nexus-network-intelligence" target="_blank" rel="noreferrer" className="rounded-full bg-accent px-5 py-3 font-medium text-white">Explore source code ↗</a>
+        <a href="https://github.com/lsequx/nexus-network-intelligence" target="_blank" rel="noreferrer" className="rounded-full bg-accent px-5 py-3 font-medium text-on-accent">Explore source code ↗</a>
         <a href="https://github.com/lsequx/nexus-network-intelligence#how-it-works" target="_blank" rel="noreferrer" className="rounded-full border border-border px-5 py-3 hover:border-accent">Architecture & setup ↗</a>
       </div>
       <figure className="mt-10 overflow-hidden rounded-2xl border border-border bg-surface">

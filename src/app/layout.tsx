@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono, Sora, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { site } from "@/lib/site";
+import { activeTheme, themes } from "@/lib/themes";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -11,6 +12,9 @@ const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
 });
+// Display fonts used by the editorial and sunset themes
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", preload: false });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora", preload: false });
 
 const description =
   "Full-stack developer with a network operations experience. Python, FastAPI, React, Next.js and TypeScript.";
@@ -60,18 +64,19 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${space.variable} ${jetbrains.variable}`}
+      data-theme={activeTheme}
+      className={`${inter.variable} ${space.variable} ${jetbrains.variable} ${fraunces.variable} ${sora.variable}`}
     >
       <body className="antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-on-accent"
         >
           Skip to content
         </a>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme={themes[activeTheme].defaultMode}
           enableSystem={false}
         >
           <ScrollProgress />

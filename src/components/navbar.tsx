@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { site } from "@/lib/site";
+import { profile, site } from "@/lib/site";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Navbar() {
@@ -50,7 +50,7 @@ export function Navbar() {
           href="#home"
           className="font-display text-lg font-bold tracking-tight"
         >
-          LS<span className="text-accent">.</span>
+          {profile.initials}<span className="text-accent">.</span>
         </a>
 
         {/* Desktop links */}

@@ -5,7 +5,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { GraduationCap, Zap } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { education, experience } from "@/lib/site";
+import { education, experience, sections } from "@/lib/site";
 
 export function Experience() {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,7 +19,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="mx-auto max-w-6xl px-6 py-28">
-      <SectionHeading label="experience" title="Where I've worked" />
+      <SectionHeading {...sections.experience} />
 
       <div ref={ref} className="relative">
         {/* Track + animated progress line */}
@@ -98,7 +98,7 @@ export function Experience() {
       <div className="mt-24">
         <Reveal>
           <h3 className="flex items-center gap-3 font-display text-2xl font-bold tracking-tight">
-            <GraduationCap className="text-accent" /> Education
+            <GraduationCap className="text-accent" /> {sections.education.title}
           </h3>
         </Reveal>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
